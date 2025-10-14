@@ -39,6 +39,6 @@ public class ClassAndTagNameLocator {
         Thread.sleep(3000);
 
         // 6️⃣ Close browser
-        driver.quit();
+        driver.close();
     }
 }
