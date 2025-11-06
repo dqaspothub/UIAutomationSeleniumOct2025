@@ -28,6 +28,7 @@ public class SimpleSelect {
         // 3. Select by index
         select.selectByIndex(2); // index is 0-based
 
+       
         // Get currently selected option
         WebElement selected = select.getFirstSelectedOption();
         System.out.println("Selected: " + selected.getText());
