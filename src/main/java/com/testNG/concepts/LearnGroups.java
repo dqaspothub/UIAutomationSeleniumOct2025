@@ -4,13 +4,6 @@ import org.testng.annotations.Test;
 
 public class LearnGroups {
 
-	public int add(int a, int b) {
-		
-		int c = a+b;
-		
-		return c;
-	}
-	
 	@Test(groups="sanity")
 	public void t1() {
 		System.out.println("t1");

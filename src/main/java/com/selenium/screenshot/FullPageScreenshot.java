@@ -22,7 +22,7 @@ public class FullPageScreenshot {
 		
 		//QED_Full_Page_Screenshot.png takes a normal screenshot of the entire page from top to bottom and does not include the browser address bar.
 
-		File source = ((FirefoxDriver)driver).getFullPageScreenshotAs(OutputType.FILE);
+		File source = ((FirefoxDriver) driver).getFullPageScreenshotAs(OutputType.FILE);
 		
 		FileHandler.copy(source, new File("QED_Full_Page_Screenshot.png"));
 

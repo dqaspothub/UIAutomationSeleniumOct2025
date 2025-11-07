@@ -12,7 +12,7 @@
 
     <test name="Test 2">
         <classes>
-            <class name="SuiteLevelExample"/>
+            <class name="com.testNG.concepts.SuiteLevelExample"/>
         </classes>
     </test>
 
