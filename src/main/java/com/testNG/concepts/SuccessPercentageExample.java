@@ -4,17 +4,18 @@ package com.testNG.concepts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.Random;
-
 public class SuccessPercentageExample {
 
-    private final Random rnd = new Random();
+    private int runCount = 0;
 
-    /**
-     * This test runs 10 times. At least 60% (i.e. 6) of runs must pass for TestNG to mark the test as passed.
-     * The test randomly fails to simulate a flaky test.
-     */
-    @Test(invocationCount = 10, successPercentage = 60)
-    public void flakyButToleratedTest() {
-        int value = rnd.nextInt(10); // 0..9
-        System.out.printf("flakyButToleratedTest -> val
+    @Test(invocationCount = 5, successPercentage = 60)
+    public void flakyTest() {
+        runCount++;
+        System.out.println("Running test invocation: " + runCount);
+
+        // Fail the first two runs intentionally
+        if (runCount <= 2) {
+            Assert.fail("Intentional failure on run " + runCount);
+        }
+    }
+}
